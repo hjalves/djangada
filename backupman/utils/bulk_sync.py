@@ -89,15 +89,19 @@ def bulk_compare(old_models, new_models, key_fields, ignore_fields=None):
     """ Compare two sets of models by `key_fields`.
     `old_models`: Iterable of Django ORM objects to compare.
     `new_models`: Iterable of Django ORM objects to compare.
-    `key_fields`: Identifying attribute name(s) to match up `new_models` items with database rows.  If a foreign key
-            is being used as a key field, be sure to pass the `fieldname_id` rather than the `fieldname`.
-    `ignore_fields`: (optional) If set, provide field names that should not be considered when comparing objects.
+    `key_fields`: Identifying attribute name(s) to match up `new_models`
+    items with database rows.  If a foreign key
+            is being used as a key field, be sure to pass the `fieldname_id`
+            rather than the `fieldname`.
+    `ignore_fields`: (optional) If set, provide field names that should not be
+    considered when comparing objects.
 
     Returns: dict of
         'added': list of all added objects.
         'unchanged': list of all unchanged objects.
         'updated': list of all updated objects.
-        'updated_details': dict of {obj: {field_name: (old_value, new_value)}} for all changed fields in each updated object.
+        'updated_details': dict of {obj: {field_name: (old_value, new_value)}}
+        for all changed fields in each updated object.
         'removed': list of all removed objects.
 
     """
@@ -143,12 +147,17 @@ def compare_objs(obj1, obj2, ignore_fields=None):
 
     `obj1`: The first object to compare.
     `obj2`: The second object to compare.
-    `key_fields`: Identifying attribute name(s) to match up `new_models` items with database rows.  If a foreign key
-            is being used as a key field, be sure to pass the `fieldname_id` rather than the `fieldname`.
-    `ignore_fields`: (optional) If set, provide field names that should not be considered when comparing objects.
-            If a foreign key is being used as an ignore_field, be sure to pass the `fieldname_id` rather than the `fieldname`.
+    `key_fields`: Identifying attribute name(s) to match up `new_models` items
+    with database rows.  If a foreign key
+            is being used as a key field, be sure to pass the `fieldname_id`
+            rather than the `fieldname`.
+    `ignore_fields`: (optional) If set, provide field names that should not be
+    considered when comparing objects.
+            If a foreign key is being used as an ignore_field, be sure to pass
+            the `fieldname_id` rather than the `fieldname`.
 
-    Returns: dict of changed fields and their old/new values: {field_name: (old_value, new_value)}
+    Returns: dict of changed fields and their old/new values:
+    {field_name: (old_value, new_value)}
     """
 
     ret = {}

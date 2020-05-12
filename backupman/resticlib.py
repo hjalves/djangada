@@ -16,9 +16,9 @@ class ResticWrapper:
         }
 
     def call(self, *a, **kw):
-        kw = [f'--{k}' if v is True else f'--{k}={v}' for k, v in kw.items()]
+        kw = [f"--{k}" if v is True else f"--{k}={v}" for k, v in kw.items()]
         args = [self.bin, *a, *kw]
-        logger.debug("running: %s", ' '.join(args))
+        logger.debug("running: %s", " ".join(args))
         result = subprocess.run(args, capture_output=True, text=True, env=self.env)
         logger.debug("exit code: %s", result.returncode)
         if result.stderr:
@@ -27,17 +27,17 @@ class ResticWrapper:
         return result.stdout
 
     def snapshots(self):
-        output = self.call('snapshots', json=True)
+        output = self.call("snapshots", json=True)
         return json.loads(output)
 
     def ls(self, snapshot, *args):
-        output = self.call('ls', snapshot, *args, json=True)
+        output = self.call("ls", snapshot, *args, json=True)
         result = []
-        for d in (json.loads(x) for x in output.split('\n') if x.strip()):
-            if d.pop('struct_type') == 'node':
+        for d in (json.loads(x) for x in output.split("\n") if x.strip()):
+            if d.pop("struct_type") == "node":
                 result.append(d)
         return result
 
     def stats(self, *args):
-        output = self.call('stats', *args, json=True)
+        output = self.call("stats", *args, json=True)
         return json.loads(output)

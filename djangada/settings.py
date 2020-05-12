@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2u-s^3dh#t-0pij^9r!ugbx46*7r^!iz!u99e3&!l4!jh^eh^a'
+SECRET_KEY = "2u-s^3dh#t-0pij^9r!ugbx46*7r^!iz!u99e3&!l4!jh^eh^a"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,67 +30,67 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
+    "admin_interface",
     # Django
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    "django.contrib.admin",
+    "django.contrib.admindocs",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     # Third-party
-    'colorfield',
-    'django_better_admin_arrayfield',
-    'django_extensions',
-    'polymorphic',
+    "colorfield",
+    "django_better_admin_arrayfield",
+    "django_extensions",
+    "polymorphic",
     # Project
-    'djangada.core',
-    'backupman',
+    "djangada.core",
+    "backupman",
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'djangada.urls'
+ROOT_URLCONF = "djangada.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'djangada.wsgi.application'
+WSGI_APPLICATION = "djangada.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'djangada'),
-        'USER': os.environ.get('DB_USER', 'djangada'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'djangada'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432')
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME", "djangada"),
+        "USER": os.environ.get("DB_USER", "djangada"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "djangada"),
+        "HOST": os.environ.get("DB_HOST", "localhost"),
+        "PORT": os.environ.get("DB_PORT", "5432"),
     }
 }
 
@@ -98,27 +98,19 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'Europe/Lisbon'
+TIME_ZONE = "Europe/Lisbon"
 
 USE_I18N = True
 
@@ -132,69 +124,54 @@ FORMAT_MODULE_PATH = "djangada.locale"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
 
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'colored',
-            'stream': 'ext://sys.stdout',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "colored",
+            "stream": "ext://sys.stdout",
         },
     },
-    'formatters': {
-        'verbose': {
-            'format': '[%(asctime)s] [%(levelname)s] %(module)s: %(message)s'
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-        'colored': {
-            '()': 'colorlog.ColoredFormatter',
-            'format': '%(asctime)s.%(msecs)03d '
-                      '%(log_color)s[%(levelname)4.4s]%(reset)s '
-                      '(%(process)s.%(threadName)s) '
-                      '%(name_log_color)s%(name)s%(reset)s: '
-                      '%(message)s',
-            'datefmt': '%H:%M:%S',
-            'log_colors': {
-                'DEBUG': 'bold_cyan',
-                'INFO': 'bold_green',
-                'WARNING': 'bold_yellow',
-                'ERROR': 'bold_red',
-                'CRITICAL': 'bold_purple',
+    "formatters": {
+        "verbose": {"format": "[%(asctime)s] [%(levelname)s] %(module)s: %(message)s"},
+        "simple": {"format": "%(levelname)s %(message)s"},
+        "colored": {
+            "()": "colorlog.ColoredFormatter",
+            "format": "%(asctime)s.%(msecs)03d "
+            "%(log_color)s[%(levelname)4.4s]%(reset)s "
+            "(%(process)s.%(threadName)s) "
+            "%(name_log_color)s%(name)s%(reset)s: "
+            "%(message)s",
+            "datefmt": "%H:%M:%S",
+            "log_colors": {
+                "DEBUG": "bold_cyan",
+                "INFO": "bold_green",
+                "WARNING": "bold_yellow",
+                "ERROR": "bold_red",
+                "CRITICAL": "bold_purple",
             },
-            'secondary_log_colors': {
-                'name': {
-                    'DEBUG': 'bold_white',
-                    'INFO': 'bold_white',
-                    'WARNING': 'bold_yellow',
-                    'ERROR': 'bold_red',
-                    'CRITICAL': 'bold_purple',
+            "secondary_log_colors": {
+                "name": {
+                    "DEBUG": "bold_white",
+                    "INFO": "bold_white",
+                    "WARNING": "bold_yellow",
+                    "ERROR": "bold_red",
+                    "CRITICAL": "bold_purple",
                 }
             },
         },
     },
-    'root': {
-        'level': 'INFO',
-        'handlers': ['console']
-    },
-    'loggers': {
-        'django': {
-            'level': 'INFO'
-        },
-        'django.db': {
-            'level': 'INFO'
-        },
-        'djangada': {
-            'level': 'DEBUG'
-        },
-        'backupman': {
-            'level': 'DEBUG'
-        }
+    "root": {"level": "INFO", "handlers": ["console"]},
+    "loggers": {
+        "django": {"level": "INFO"},
+        "django.db": {"level": "INFO"},
+        "djangada": {"level": "DEBUG"},
+        "backupman": {"level": "DEBUG"},
     },
 }

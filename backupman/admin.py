@@ -17,8 +17,8 @@ from backupman.models import (
 
 
 class TagFilter(admin.SimpleListFilter):
-    title = 'tags'
-    parameter_name = 'tags'
+    title = "tags"
+    parameter_name = "tags"
 
     def lookups(self, request, model_admin):
         tags = Snapshot.objects.values_list("tags", flat=True)
