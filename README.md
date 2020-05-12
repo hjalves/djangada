@@ -1,0 +1,2 @@
+# djangada
+Experiments with Django
