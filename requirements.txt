@@ -21,7 +21,7 @@ django-extensions==2.2.9  # via -r requirements.in
 django-flat-responsive==2.0  # via django-admin-interface
 django-flat-theme==1.1.4  # via django-admin-interface
 django-polymorphic==2.1.2  # via -r requirements.in
-django==2.2.12            # via -r requirements.in, channels, django-polymorphic
+django==2.2.13            # via -r requirements.in, channels, django-polymorphic
 docutils==0.16            # via -r requirements.in
 hyperlink==19.0.0         # via twisted
 idna==2.9                 # via hyperlink, twisted

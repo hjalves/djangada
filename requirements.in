@@ -1,4 +1,4 @@
-Django~=2.2.12
+Django~=2.2.13
 channels>=2.4.0
 colorlog>=4.1.0
 django-admin-interface>=0.12.2
